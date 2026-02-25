@@ -1,6 +1,6 @@
 **📡 Enterprise Multi-Site Network with Static Routing & Centralized DHCP**
 
-(Cisco Packet Tracer Project)
+<img width="516" height="560" alt="image" src="https://github.com/user-attachments/assets/87415ab2-2b0c-4330-ac5c-34013fb86cf5" />
 
 **📌 Project Scope**
 
