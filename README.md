@@ -1,8 +1,8 @@
-**📡 Enterprise Multi-Site Network with Static Routing & Centralized DHCP**
+## 📡 Enterprise Multi-Site Network with Static Routing & Centralized DHCP
 
 <img width="516" height="560" alt="image" src="https://github.com/user-attachments/assets/87415ab2-2b0c-4330-ac5c-34013fb86cf5" />
 
-**📌 Project Scope**
+## 📌 Project Scope
 
 This project simulates the design, configuration, and validation of a multi-site enterprise network using Cisco networking concepts. The environment represents an organization with two geographically separated branch offices (GA and NY) and a centralized Data Center (DC) responsible for providing core network services.
 
@@ -24,8 +24,9 @@ This lab was built from scratch in Cisco Packet Tracer, including:
 
 - End-to-end connectivity testing
 
-**🏗️ Network Design Explanation**
-**🧭 Multi-Site Topology**
+## 🏗️ Network Design Explanation
+
+🧭 Multi-Site Topology
 
 The network consists of three main locations:
 
@@ -35,7 +36,7 @@ The network consists of three main locations:
 
 3. Central Data Center (DC) – Hosts centralized services including DHCP servers.
 
-**📷 Topology Diagram**
+## 📷 Topology Diagram
 
 Full Packet Tracer topology view
 
@@ -43,7 +44,7 @@ Full Packet Tracer topology view
 
 This setup reflects a typical enterprise environment, where branch offices rely on centralized infrastructure for services like IP address management and inter-branch connectivity. The topology ensures that each site can communicate with all others, demonstrating both LAN and WAN interactions.
 
-**📐 IP Addressing & Subnetting Strategy**
+## 📐 IP Addressing & Subnetting Strategy
 
 The first step in the lab is planning IP addressing for all sites. Proper subnetting ensures efficient use of IP space and avoids conflicts between branches.
 
@@ -75,7 +76,7 @@ Georgia Router
 
 By carefully designing the subnets, this lab illustrates the importance of structured IP planning in enterprise networks and how it supports scalability and manageability.
 
-**🛣️ Routing Implementation (Static Routing)**
+## 🛣️ Routing Implementation (Static Routing)
 
 After subnetting, static routes are configured on all routers to allow inter-site communication:
 
@@ -97,7 +98,7 @@ New York Router
 
 <img width="718" height="363" alt="image" src="https://github.com/user-attachments/assets/27cad251-59a1-42df-829c-82d500d338bd" />
 
-**🧠 Centralized DHCP Design**
+## 🧠 Centralized DHCP Design
 
 Instead of deploying DHCP servers at each branch, all DHCP services are hosted in the Data Center. This design:
 
@@ -113,7 +114,7 @@ Two DHCP servers were configured with static IPs:
 
 - One handling NY scopes
 
-**🔁 DHCP Relay (ip helper-address)**
+## 🔁 DHCP Relay (ip helper-address)
 
 Since DHCP requests are broadcast-based and cannot cross routers by default, DHCP relay was implemented on branch routers using ip helper-address.
 
@@ -132,7 +133,7 @@ This allows remote clients to receive IP configuration from centralized servers.
 <img width="436" height="446" alt="image" src="https://github.com/user-attachments/assets/49c1a2be-dfaa-43bc-b446-3783fdd061c2" />
 
 
-**🖥️ DHCP Scope & Client Validation**
+## 🖥️ DHCP Scope & Client Validation
 
 End-user PCs at each branch were configured for DHCP and successfully received:
 
@@ -160,7 +161,7 @@ New York PC
 
 <img width="940" height="502" alt="image" src="https://github.com/user-attachments/assets/66f849cd-ef33-4357-b78d-800ecbd18adf" />
 
-**🔌 Switching & Management**
+## 🔌 Switching & Management
 
 All switches were configured with:
 
@@ -173,7 +174,7 @@ All switches were configured with:
 This allows remote management and reflects standard access-layer switch configuration.
 
 
-**📸 Switch Management Config**
+## 📸 Switch Management Config
 
 Georgia Switch
 
@@ -183,7 +184,7 @@ New York Switch
 
 <img width="728" height="510" alt="image" src="https://github.com/user-attachments/assets/db1a0414-240f-4d0d-b9ef-339287b84f65" />
 
-**✅ Testing & Verification**
+## ✅ Testing & Verification
 
 Finally, the lab includes verification to confirm proper network operation:
 
@@ -199,11 +200,13 @@ NY-PC -> GA-PC
 
 <img width="544" height="382" alt="image" src="https://github.com/user-attachments/assets/c504c3f7-c475-47de-bdae-e746346d1bd3" />
 
-**Key Concepts Demonstrated**
+## Key Concepts Demonstrated
 - Subnet planning and IP addressing
 - Static routing between multiple sites
 - Centralized DHCP with DCHP relay
 - Enterprise switch configuration and management
 - End-to-end network verification
+
+---
 
 This lab provides practical experience with enterprise network design, highlighting both the planning and configuration aspects required to build a functional, scalable, and manageable multi-site network.
