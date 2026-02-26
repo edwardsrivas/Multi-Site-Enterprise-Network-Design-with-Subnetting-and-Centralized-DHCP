@@ -27,31 +27,13 @@ This lab was built from scratch in Cisco Packet Tracer, including:
 **🏗️ Network Design Explanation**
 **🧭 Multi-Site Topology**
 
-The network consists of three logical sites:
+The network consists of three main locations:
 
-- GA (Georgia Branch Office)
+1. Georgia Branch Office (GA) – Contains end-user devices, a switch, and a router.
 
-- NY (New York Branch Office)
+2. New York Branch Office (NY) – Similar setup to GA, demonstrating branch connectivity.
 
-- DC (Data Center / Core Services)
-
-Each branch contains:
-
-- A router
-
-- A switch
-
-- End-user devices (PCs)
-
-The Data Center contains:
-
-- A core router
-
-- A switch
-
-Centralized DHCP servers for multiple sites
-
-WAN connections between routers use /30 point-to-point networks to conserve IP address space and follow best practices.
+3. Central Data Center (DC) – Hosts centralized services including DHCP servers.
 
 **📷 Topology Diagram**
 
@@ -59,17 +41,11 @@ Full Packet Tracer topology view
 
 <img width="1893" height="666" alt="image" src="https://github.com/user-attachments/assets/623841be-646b-4004-89f5-58bf5794744a" />
 
+This setup reflects a typical enterprise environment, where branch offices rely on centralized infrastructure for services like IP address management and inter-branch connectivity. The topology ensures that each site can communicate with all others, demonstrating both LAN and WAN interactions.
+
 **📐 IP Addressing & Subnetting Strategy**
 
-The IP addressing plan was carefully designed to:
-
-- Separate each site into its own logical network
-
-- Use different subnet sizes based on purpose
-
-- Prevent IP overlap
-
-- Support scalability
+The first step in the lab is planning IP addressing for all sites. Proper subnetting ensures efficient use of IP space and avoids conflicts between branches.
 
 **WAN Subnetting**
 
@@ -97,17 +73,17 @@ Georgia Router
 
 <img width="720" height="104" alt="image" src="https://github.com/user-attachments/assets/d2683d52-d4b1-47a9-81f1-4b7ab33564b0" />
 
+By carefully designing the subnets, this lab illustrates the importance of structured IP planning in enterprise networks and how it supports scalability and manageability.
+
 **🛣️ Routing Implementation (Static Routing)**
 
-Static routing was intentionally chosen instead of a dynamic routing protocol to:
+After subnetting, static routes are configured on all routers to allow inter-site communication:
 
-- Demonstrate understanding of packet forwarding logic
+- Demonstrates understanding of packet forwarding logic
 
-- Maintain full control over routing paths
+- Maintains full control over routing paths
 
-- Reinforce foundational routing concepts
-
-Each router was configured with static routes to all remote LAN networks, ensuring full inter-site communication.
+- Reinforces foundational routing concepts
 
 Routers do not rely on default routes — each network is explicitly defined.
 
@@ -209,16 +185,25 @@ New York Switch
 
 **✅ Testing & Verification**
 
-Connectivity was verified using:
+Finally, the lab includes verification to confirm proper network operation:
 
-Ping tests between PCs across sites
+1. Ping tests across all subnets verify routing is functional.
 
-Router-to-router reachability tests
+2. DHCP leases confirm clients are receiving addresses from the centralized servers.
 
-DHCP lease validation
+3. Switch management IPs confirm accessibility for administrative tasks.
 
 **📷 End-to-End Ping Test**
 
 NY-PC -> GA-PC
 
 <img width="544" height="382" alt="image" src="https://github.com/user-attachments/assets/c504c3f7-c475-47de-bdae-e746346d1bd3" />
+
+**Key Concepts Demonstrated**
+- Subnet planning and IP addressing
+- Static routing between multiple sites
+- Centralized DHCP with DCHP relay
+- Enterprise switch configuration and management
+- End-to-end network verification
+
+This lab provides practical experience with enterprise network design, highlighting both the planning and configuration aspects required to build a functional, scalable, and manageable multi-site network.
